@@ -1,0 +1,103 @@
+.content-nav-card { margin-bottom: 20px; }
+
+.content-nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.content-legend {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* Type badges */
+.content-type-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+.type-story  { background: #fce7f3; color: #be185d; }
+.type-auto   { background: #dbeafe; color: #1d4ed8; }
+.type-embody { background: #fff7ed; color: #c2410c; }
+
+/* List */
+.content-list { display: flex; flex-direction: column; gap: 0; }
+
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0e4d7;
+  transition: background 0.15s;
+}
+.content-row:last-child { border-bottom: none; }
+.content-row:hover { background: #fdf9f5; }
+
+.content-row-today {
+  background: #fff8ec;
+  border-left: 4px solid #c9a96e;
+  border-bottom: 1px solid #e8d5a3;
+}
+.content-row-today:hover { background: #fff3d6; }
+
+.content-row-custom .content-hook { font-style: italic; }
+
+/* Jour */
+.content-jour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 68px;
+  flex-shrink: 0;
+}
+.content-jour-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3a2a1e;
+}
+.content-jour-date {
+  font-size: 11px;
+  color: #7a5c4a;
+}
+.content-aujourd-hui {
+  font-size: 10px;
+  font-weight: 700;
+  color: #c9a96e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* Hook text */
+.content-hook {
+  flex: 1;
+  font-size: 14px;
+  color: #3a2a1e;
+  line-height: 1.4;
+}
+
+/* Edit button */
+.content-edit-btn {
+  opacity: 0;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+.content-row:hover .content-edit-btn { opacity: 1; }
+.content-row-today .content-edit-btn { opacity: 0.5; }
+.content-row-today:hover .content-edit-btn { opacity: 1; }
+
+@media (max-width: 600px) {
+  .content-row { gap: 10px; padding: 10px 12px; }
+  .content-hook { font-size: 13px; }
+  .content-edit-btn { opacity: 1; }
+}

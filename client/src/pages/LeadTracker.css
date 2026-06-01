@@ -1,0 +1,189 @@
+.badge-decouverte { background: #ede9fe; color: #5b21b6; font-size: 12px; font-weight: 600; }
+.lead-nom { font-weight: 600; color: #3a2a1e; }
+.lead-contact { color: #7a5c4a; font-size: 13px; }
+.lead-offre { color: #7a5c4a; font-size: 13px; font-style: italic; }
+.lead-date { color: #c9a96e; font-size: 13px; font-weight: 600; white-space: nowrap; }
+.lead-total { font-size: 13px; white-space: nowrap; }
+.lead-nb-achats { color: #7a5c4a; font-weight: 400; }
+.action-btns { display: flex; gap: 6px; }
+
+.btn-suivis {
+  background: #f0e4d7;
+  color: #7a5c4a;
+  border: 2px solid transparent;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn-suivis:hover { background: #e8d5a3; color: #3a2a1e; }
+.btn-suivis.active { background: #3a2a1e; color: #e8d5a3; border-color: #3a2a1e; }
+
+.lead-row-expanded td { background: #fdf6f0; }
+.suivis-row td { padding: 0 !important; border-bottom: 3px solid #c9a96e !important; }
+
+/* ─── Detail Panel ─── */
+.suivis-panel {
+  background: #fdf6f0;
+  border-left: 4px solid #c9a96e;
+  padding: 20px 24px;
+}
+
+.premier-contact-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff8ec;
+  border: 1px solid #e8d5a3;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #3a2a1e;
+  margin-bottom: 16px;
+}
+
+.detail-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.detail-section {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 18px;
+  border: 1px solid #f0e4d7;
+}
+
+.detail-section-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: #3a2a1e;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-loading, .detail-empty {
+  color: #7a5c4a;
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+/* ─── Achats ─── */
+.achats-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+
+.achat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #fdf6f0;
+  border-radius: 8px;
+  border: 1px solid #f0e4d7;
+}
+.achat-date { font-weight: 700; font-size: 12px; color: #c9a96e; white-space: nowrap; flex-shrink: 0; }
+.achat-produit { flex: 1; font-size: 13px; color: #3a2a1e; min-width: 0; }
+.achat-montant { font-weight: 700; font-size: 13px; color: #059669; white-space: nowrap; flex-shrink: 0; }
+
+.achats-total {
+  font-size: 13px;
+  color: #3a2a1e;
+  text-align: right;
+  padding: 6px 12px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* ─── Suivis ─── */
+.suivis-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+
+.suivi-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fdf6f0;
+  border: 2px solid #f0e4d7;
+  border-radius: 10px;
+  padding: 8px 12px;
+  transition: all 0.2s;
+}
+.suivi-item.effectue { background: #f0fdf4; border-color: #86efac; }
+.suivi-item.effectue .suivi-desc { text-decoration: line-through; color: #9ca3af; }
+
+.suivi-check-label { display: flex; align-items: center; cursor: pointer; flex-shrink: 0; }
+.suivi-check-label input[type="checkbox"] { display: none; }
+.suivi-checkmark {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  border: 2px solid #d0d5dd;
+  color: #d0d5dd;
+  transition: all 0.2s;
+  background: white;
+}
+.suivi-item.effectue .suivi-checkmark { background: #22c55e; border-color: #22c55e; color: white; }
+
+.suivi-body { flex: 1; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; }
+.suivi-date { font-weight: 700; font-size: 12px; color: #c9a96e; white-space: nowrap; flex-shrink: 0; }
+.suivi-desc { font-size: 13px; color: #3a2a1e; flex: 1; min-width: 0; }
+.suivi-badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+.suivi-done { background: #dcfce7; color: #16a34a; }
+.suivi-pending { background: #fef9c3; color: #a16207; }
+
+.suivi-delete {
+  background: none; border: none; color: #d1d5db;
+  font-size: 16px; cursor: pointer; padding: 0 2px;
+  line-height: 1; flex-shrink: 0; transition: color 0.2s;
+}
+.suivi-delete:hover { color: #dc2626; }
+
+/* ─── Shared form ─── */
+.suivi-form { display: flex; gap: 6px; align-items: stretch; flex-wrap: wrap; margin-top: 8px; }
+
+.suivi-input-date, .suivi-input-desc, .suivi-input-montant {
+  padding: 8px 10px;
+  border: 2px solid #e8d5a3;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  color: #3a2a1e;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.suivi-input-date:focus, .suivi-input-desc:focus, .suivi-input-montant:focus { border-color: #c9a96e; }
+.suivi-input-date { flex-shrink: 0; }
+.suivi-input-desc { flex: 1; min-width: 120px; }
+.suivi-input-montant { width: 100px; flex-shrink: 0; }
+
+.suivi-add-btn {
+  background: linear-gradient(135deg, #c9a96e, #a07840);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+.suivi-add-btn:hover { opacity: 0.9; }
+.suivi-add-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+@media (max-width: 900px) {
+  .detail-columns { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .suivis-panel { padding: 14px 16px; }
+  .suivi-form { flex-direction: column; }
+  .suivi-input-date, .suivi-input-desc, .suivi-input-montant, .suivi-add-btn { width: 100%; }
+}
