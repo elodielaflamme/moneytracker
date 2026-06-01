@@ -8,5 +8,8 @@
     "dev": "npm run server & npm run client",
     "build": "npm run build --prefix client",
     "start": "NODE_ENV=production node server/server.js"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
