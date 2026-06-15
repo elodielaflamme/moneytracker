@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/inscription" element={<Register />} />
           <Route path="/" element={<PrivateRoute><Layout /></PrivateRoute>}>
             <Route index element={<Dashboard />} />
-            <Route path="leads" element={<LeadTracker />} />
+            <Route path="dashboard" element={<LeadTracker />} />
             <Route path="ventes" element={<Ventes />} />
             <Route path="clients" element={<Clients />} />
             <Route path="content" element={<Content />} />
